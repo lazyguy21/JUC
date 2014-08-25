@@ -18,8 +18,8 @@ public class LiftOff implements Runnable {
     }
     @Override
     public void run() {
-        System.out.println();
         while(countDown-->0){
+            System.out.println(getStatus());
             Thread.yield();
         }
     }
