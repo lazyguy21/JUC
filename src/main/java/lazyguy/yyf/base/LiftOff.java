@@ -1,8 +1,10 @@
+package lazyguy.yyf.base;
+
 /**
  * Created by yeyf on 2014-8-25.
  */
 public class LiftOff implements Runnable {
-    private Integer countDown=10;
+    protected Integer countDown=10;
     private static Integer taskCount=0;
     private final Integer id=taskCount++;
 
@@ -13,13 +15,13 @@ public class LiftOff implements Runnable {
     }
 
     public String getStatus(){
-        return "#" + id +"发射倒计时: "+(countDown>0?countDown:"发射~");
+        return "ID" + id +"("+(countDown>0?countDown:"发射~")+"),  ";
 
     }
     @Override
     public void run() {
         while(countDown-->0){
-            System.out.println(getStatus());
+            System.out.print(getStatus());
             Thread.yield();
         }
     }
@@ -27,5 +29,6 @@ public class LiftOff implements Runnable {
     public static void main(String[] args) {
         LiftOff launch = new LiftOff();
         launch.run();
+        System.out.println("这样子发射没有启动一个线程，所以要等发射完了再打印这句话");
     }
 }
