@@ -1,10 +1,9 @@
 package lazyguy.yyf.api.join;
 
 public class Joiner extends Thread {
-  private Sleeper sleeper; 
+  private     Sleeper sleeper;
   public Joiner(String name, Sleeper sleeper) { 
-    super(name); 
-    this.sleeper = sleeper; 
+    super(name);   this.sleeper = sleeper;
     start(); 
   } 
   public void run() { 
