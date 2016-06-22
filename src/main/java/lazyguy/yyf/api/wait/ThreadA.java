@@ -1,6 +1,6 @@
 package lazyguy.yyf.api.wait;
 
-class ThreadA {
+class  WaitDemo{
     public static void main(String[] args) {
         ThreadB b = new ThreadB();
         b.start();
