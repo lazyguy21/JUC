@@ -1,4 +1,4 @@
-package lazyguy.yyf.deadLock;
+package lazyguy.yyf.designPattern.deadLock;
 
 /**
  * Created by tobi on 16-6-22.

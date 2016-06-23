@@ -1,14 +1,12 @@
-package lazyguy.yyf.critialRegion;
-
-import java.util.regex.Pattern;
+package lazyguy.yyf.designPattern.critialRegion;
 
 /**
  * Created by tobi on 16-6-22.
  */
-public class NotThreadSafeGate extends Gate {
+public class ThreadSafeGate extends Gate {
 
 
-    public  void pass(String name, String address) {
+    public synchronized void pass(String name, String address) {
         this.count++;
         this.name = name;
         this.address = address;
@@ -23,5 +21,6 @@ public class NotThreadSafeGate extends Gate {
            System.out.println("error occurs : ");
            printState();
        }
+        System.out.println(count);
     }
 }

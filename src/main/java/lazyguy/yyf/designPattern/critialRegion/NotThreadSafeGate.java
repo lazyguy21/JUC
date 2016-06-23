@@ -1,12 +1,12 @@
-package lazyguy.yyf.critialRegion;
+package lazyguy.yyf.designPattern.critialRegion;
 
 /**
  * Created by tobi on 16-6-22.
  */
-public class ThreadSafeGate extends Gate {
+public class NotThreadSafeGate extends Gate {
 
 
-    public synchronized void pass(String name, String address) {
+    public  void pass(String name, String address) {
         this.count++;
         this.name = name;
         this.address = address;
@@ -21,6 +21,5 @@ public class ThreadSafeGate extends Gate {
            System.out.println("error occurs : ");
            printState();
        }
-        System.out.println(count);
     }
 }

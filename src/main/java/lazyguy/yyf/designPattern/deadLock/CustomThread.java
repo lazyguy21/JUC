@@ -1,4 +1,4 @@
-package lazyguy.yyf.deadLock;
+package lazyguy.yyf.designPattern.deadLock;
 
 import java.util.concurrent.TimeUnit;
 

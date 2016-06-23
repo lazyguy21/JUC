@@ -1,4 +1,4 @@
-package lazyguy.yyf.critialRegion;
+package lazyguy.yyf.designPattern.critialRegion;
 
 /**
  * Created by tobi on 16-6-22.
