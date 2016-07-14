@@ -1,8 +1,7 @@
-package lazyguy.yyf.executors;
+package lazyguy.yyf.tool.executors;
 
 import lazyguy.yyf.base.LiftOff;
 
-import java.util.concurrent.Executor;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 

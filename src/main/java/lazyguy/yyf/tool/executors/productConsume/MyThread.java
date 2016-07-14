@@ -1,4 +1,4 @@
-package lazyguy.yyf.executors.productConsume;
+package lazyguy.yyf.tool.executors.productConsume;
 
 public class MyThread extends Thread
 {

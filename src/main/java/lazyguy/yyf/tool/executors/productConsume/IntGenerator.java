@@ -1,4 +1,4 @@
-package lazyguy.yyf.executors.productConsume;
+package lazyguy.yyf.tool.executors.productConsume;
 
 /**
  * Created by yeyf on 2014-8-28.
