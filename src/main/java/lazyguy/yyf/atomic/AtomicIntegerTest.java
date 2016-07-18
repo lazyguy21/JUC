@@ -6,13 +6,12 @@ public class AtomicIntegerTest {
     static AtomicInteger ai = new AtomicInteger(1);
 
     public static void main(String[] args) throws InterruptedException {
-        System.out.println(ai.getAndIncrement());
-        System.out.println(ai.get());
+
         Runnable runnable = new Runnable() {
             @Override
             public void run() {
                 for (int i = 0; i < 50; i++) {
-                    ai.incrementAndGet();
+                    ai.addAndGet(2);
                 }
             }
         };
