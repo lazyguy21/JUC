@@ -15,9 +15,13 @@ public class SemaphoreDemo {
                     try {
                         System.out.println("I got a permit ,do something!");
                         TimeUnit.SECONDS.sleep(5);
-                        semaphore.release();
+//                        int ex = 1 / 0;// 注意如果try块中做的事抛出了异常，那么semaphore并不会自动release,所以必须将release放在finally里面
+//                        semaphore.release();
                     } catch (InterruptedException e) {
                         e.printStackTrace();
+                    }finally {
+// 注意如果try块中做的事抛出了异常，那么semaphore并不会自动release,所以必须将release放在finally里面
+                        semaphore.release();
                     }
                 } else {
                     System.out.println("I do not get permit,quit~");
