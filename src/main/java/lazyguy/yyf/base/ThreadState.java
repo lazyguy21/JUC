@@ -7,11 +7,20 @@ import java.util.concurrent.TimeUnit;
  */
 public class ThreadState {
     public static void main(String[] args) {
-        new Thread(new TimeWaiting(), "TimeWaitingThread").start();
-        new Thread(new Waiting(), "WaitingThread").start();
+        Thread timeWaitingThread = new Thread(new TimeWaiting(), "TimeWaitingThread");
+        timeWaitingThread.start();
+        Thread waitingThread = new Thread(new Waiting(), "WaitingThread");
+        waitingThread.start();
 
-        new Thread(new Blocked(), "BlockedThread-1").start();
-        new Thread(new Blocked(), "BlockedThread-2").start();
+        Thread thread = new Thread(new Blocked(), "BlockedThread-1");
+        thread.start();
+        Thread thread1 = new Thread(new Blocked(), "BlockedThread-2");
+        thread1.start();
+        System.out.println(timeWaitingThread.getState());
+        System.out.println(waitingThread.getState());
+        System.out.println(thread.getState());
+
+        System.out.println(thread1.getState());
     }
 
 
@@ -21,7 +30,7 @@ public class ThreadState {
         public void run() {
             while (true) {
                 try {
-                    TimeUnit.SECONDS.sleep(100);
+                    TimeUnit.SECONDS.sleep(10);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
