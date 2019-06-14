@@ -16,9 +16,11 @@ public class ThreadStateTest {
             }
 
         });
+        System.out.println(thread.getState());//刚创建的时候就是new，此时还没有start
         thread.start();
+        System.out.println(thread.getState());//刚创建的时候就是new，此时还没有start
         TimeUnit.SECONDS.sleep(1);
-        Thread.State state = thread.getState();
-        System.out.println("state when sleep :"+state);
+        System.out.println(thread.getState());//刚创建的时候就是new，此时还没有start
     }
+
 }
